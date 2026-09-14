@@ -42,7 +42,7 @@ console.log(myLibrary)
 
  
  let biblioteca = []
-
+ const crypto = require("crypto")
 
 function agregarUnLibro(name, autor,libro0){
  /*this.joder = function(){
@@ -52,31 +52,27 @@ let almacen = {}
 let bookNumber = libro0
 
 almacen[bookNumber]= {
-   
+id : crypto.randomUUID(),   
 name : name,    
 autor : autor 
 }
-console.log(almacen[bookNumber])
-function mover(){
-return biblioteca.push(almacen[bookNumber])  
-  
-}
 console.log(almacen)
+function mover(){
+return biblioteca.push(almacen[bookNumber])   
+}
 return mover()
-
  }
 agregarUnLibro("la culpa y el olvido", "Tomás","libro 1")
 agregarUnLibro("Cien años de soledad", "Gabriel Garcia","libro 2")
-agregarUnLibro("La odisea de Homero", "Homero","libro3")
+agregarUnLibro("La odisea de Homero", "Homero","libro 3")
 
 
-console.log(biblioteca[3])
+console.log(biblioteca[0])
 
-let joder = {
-id : crypto.randomUUID(),    
-}
-console.log(joder)
+console.log()
 
+
+console.log()
 
 /*
 
