@@ -17,62 +17,57 @@ function addBookToLibrary(){
 
 }*/
 
-
-
+let biblioteca = []
+ let armario 
+ 
 const myLibrary = [];
 
-function Book(name) {
+function Book(name,author,pag) {
 this.name = name,
-
-this.library = function(){
-myLibrary.push(this.name) 
-}
+this.author = author,
+this.pag = pag,
+this.id = crypto.randomUUID()
 };
 
-const libro1 = new Book("Romeo y Julieta")
-const libro2 = new Book("Don Quijote de la mancha")
-const libro3 = new Book("Cien años de soledad")
-
-libro1.library()
-libro2.library()
-libro3.library()
-console.log(Object.getPrototypeOf(Book))
-console.log(Object.getPrototypeOf(Book) === myLibrary)
-console.log(myLibrary)
-
  
- let biblioteca = []
- const crypto = require("crypto")
+function agregarUnLibro(name,author,pag){
+armario = new Book(name,author,pag)    
+  myLibrary.push(armario)
+  }
 
-function agregarUnLibro(name, autor,libro0){
- /*this.joder = function(){
- biblioteca.push(this.name)   
- }*/
+  agregarUnLibro("la culpa y el olvido", "Tomás","90")
+agregarUnLibro("Cien años de soledad", "Gabriel Garcia","500")
+agregarUnLibro("La odisea de Homero", "Homero","300")
+
+
+console.log(myLibrary[2])
+
+let prueba = document.querySelector(".prueba")
+console.log(prueba.textContent = "me fasicina el nepe")
+/*
 let almacen = {}
 let bookNumber = libro0
 
 almacen[bookNumber]= {
 id : crypto.randomUUID(),   
-name : name,    
-autor : autor 
+
 }
-console.log(almacen)
+console.log(almacen[bookNumber].id)
+
+
 function mover(){
 return biblioteca.push(almacen[bookNumber])   
 }
-return mover()
- }
-agregarUnLibro("la culpa y el olvido", "Tomás","libro 1")
-agregarUnLibro("Cien años de soledad", "Gabriel Garcia","libro 2")
-agregarUnLibro("La odisea de Homero", "Homero","libro 3")
+mover()
+
+function obtenerID(){
+armario = biblioteca.find(libro => libro.id === almacen[bookNumber])
+}
+obtenerID()
+ */
+ 
 
 
-console.log(biblioteca[0])
-
-console.log()
-
-
-console.log()
 
 /*
 
