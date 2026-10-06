@@ -17,7 +17,6 @@ function addBookToLibrary(){
 
 }*/
 
-let biblioteca = []
  let armario 
  
 const myLibrary = [];
@@ -35,15 +34,77 @@ armario = new Book(name,author,pag)
   myLibrary.push(armario)
   }
 
-  agregarUnLibro("la culpa y el olvido", "Tomás","90")
+
+
+agregarUnLibro("En busca del tiempo perdido", "Marcel Proust","3000")
 agregarUnLibro("Cien años de soledad", "Gabriel Garcia","500")
 agregarUnLibro("La odisea de Homero", "Homero","300")
 
-
 console.log(myLibrary[2])
 
+const prueba2 = document.querySelector(".prueba2")  
+let fila1 = document.querySelectorAll(".fila1")  
+let fila2 = document.querySelectorAll(".fila2")  
+let fila3 = document.querySelectorAll(".fila3")  
+
+
+
+
 let prueba = document.querySelector(".prueba")
-console.log(prueba.textContent = "me fasicina el nepe")
+prueba.textContent = "me duele el pitulin"
+
+
+let numeros = 0
+let i 
+function funcionDePrueba(fila){
+for (let a = 0; a < myLibrary.length; a++) {
+
+for ( i = numeros; i < numeros+4; i++){  
+ 
+switch (i){  
+case numeros:
+  fila[i].textContent = myLibrary[a].name
+  break;
+case numeros+1:
+  fila[i].textContent = myLibrary[a].author
+  break;
+case numeros+2:
+  fila[i].textContent = myLibrary[a].pag
+  break; 
+case numeros+3:
+  fila[i].textContent = myLibrary[a].id   
+}
+} 
+numeros = i 
+} 
+}
+funcionDePrueba(fila1)
+
+
+
+function melapela(){
+  let a = 0
+  let joto = 0
+for (i = 0; i<joto+3;i++){
+ 
+switch (i){  
+case 0:
+  a += 1
+  break;
+case 1:
+  a += 2
+  break;
+case 2:
+ a += 3
+  break;  
+}
+}
+console.log(joto+3)  
+return a
+}
+console.log(melapela())
+
+
 /*
 let almacen = {}
 let bookNumber = libro0
